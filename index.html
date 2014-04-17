@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Elm Robot</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="http://elm-lang.org/elm-runtime.js"></script><!-- Or host locally-->
+    <script type="text/javascript" src="build/robot.js"></script>
+  </head>
+
+  <body>
+  </body>
+
+  <script type="text/javascript">
+      var my_elm = Elm.fullscreen(Elm.Main, {proxy: 0});
+
+      var socket = io.connect('http://localhost');
+      //Node -> Elm
+      socket.on('proxy', function (data) {
+        my_elm.ports.proxy.send(data);
+      });
+      //Elm -> Node
+      my_elm.ports.control.subscribe(function (data){
+          socket.emit("control", data);
+      });
+  </script>
+
+</html>
