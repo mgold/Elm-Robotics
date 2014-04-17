@@ -10,15 +10,15 @@
   </body>
 
   <script type="text/javascript">
-      var my_elm = Elm.fullscreen(Elm.Main, {proxy: 0});
+      var my_elm = Elm.fullscreen(Elm.Main, {proximity: 0});
 
       var socket = io.connect('http://localhost');
       //Node -> Elm
-      socket.on('proxy', function (data) {
-        my_elm.ports.proxy.send(data);
+      socket.on('proximity', function (data) {
+        my_elm.ports.proximity.send(data);
       });
       //Elm -> Node
-      my_elm.ports.control.subscribe(function (data){
+      my_elm.ports.control_out.subscribe(function (data){
           socket.emit("control", data);
       });
   </script>

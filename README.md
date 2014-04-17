@@ -12,8 +12,6 @@ elm --only-js robot.elm
 node server.js
 ````
 
-Enable the robot using the space bar. I haven't been able to brake the robot when the server quits so disable it before doing so.
-
-This code is meant to be extremely hackable, and not a monolithic framework. There are many layers but none of them are difficult.
+This code is meant to be extremely hackable, and not a monolithic framework. There are many layers but none of them are difficult. With that said, the example code targets a robot with two drive motors and a proximity sensor. Control the robot with the arrow keys. Whenever there is not exactly one arrow key down, the robot is disabled, and the motors braked.
 
 The robot must be tethered to the computer running Node. I have not investigated using Bluetooth, but you are welcome to try.

@@ -42,7 +42,7 @@ board.on("ready", function() {
     // change pins and add other Johnny-Five devices as necessary
     var left = new five.Motor([5,4])
     var right = new five.Motor([6,7])
-    var proxy = new five.Sensor("A0");
+    var proximity = new five.Sensor("A0");
 
     left.brake();
     right.brake();
@@ -51,8 +51,8 @@ board.on("ready", function() {
         //The connection event fires every time the webpage is reloaded
         //So that fixes any problem of the ready callbacks being out of order
 
-        proxy.on("data", function(){
-            socket.emit("proxy", this.value);
+        proximity.on("data", function(){
+            socket.emit("proximity", this.value);
         })
 
         socket.on('control', function (control) {
