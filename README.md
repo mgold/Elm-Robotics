@@ -4,7 +4,7 @@ _A starter kit to programming [Arduino](http://arduino.cc)-based robots in [Elm]
 
 Powered by [Node.js](http://nodejs.org), including [Johnny-Five](http://github.com/rwaldron/johnny-five) and [socket.io](http://socket.io), as well as [Firmata](http://firmata.org) and [Elm ports](http://elm-lang.org/learn/Ports.elm).
 
-The Ardunino is flashed with Firmata and then controlled from Node with Johnny-Five in Node. You write no Ardunino code. Node uses socket.io to pass events in both directions to the compiled Elm that it hosts. Elm uses ports to receive and transmit values.
+The Ardunino is flashed with Firmata and then controlled from Node with Johnny-Five. You write no Ardunino code. Node uses socket.io to pass events in both directions to the compiled Elm that it hosts. Elm uses ports to receive and transmit values.
 
 Once you have Node and Elm installed and the robot connected, compile and run using
 ````bash
