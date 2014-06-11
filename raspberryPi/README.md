@@ -1,11 +1,12 @@
 Elmberry
 ========
 
-Elmberry makes it possible to run Elm programs on your Raspberry Pi, and have the output on the GPIO pins. The caveat: you can't _compile_ them on the Pi (some of Elm's dependencies don't work well with ARM and Raspian's older version of GHC). Instead, you 
-# Write your Elm on a "normal" computer
-# Run `sh elmberry.sh myFile.elm`
-# Copy `myFile_pi.js` to your Pi
-# Run `nodejs myFile_pi.js`
+Elmberry makes it possible to run Elm programs on your Raspberry Pi, and have the output on the GPIO pins. The caveat: you can't _compile_ them on the Pi (some of Elm's dependencies don't work well with ARM and Raspian's older version of GHC). Instead, you
+
+1. Write your Elm on a "normal" computer
+2. Run `sh elmberry.sh myFile.elm`
+3. Copy `myFile_pi.js` to your Pi
+4. Run `nodejs myFile_pi.js`
 
 **Dependencies:** Node (`sudo apt-get install node`) and [WiringPi](https://projects.drogon.net/raspberry-pi/wiringpi/download-and-install/).
 
