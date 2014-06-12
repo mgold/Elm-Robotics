@@ -12,4 +12,5 @@ Elmberry makes it possible to run Elm programs on your Raspberry Pi, and have th
 
 Elmberry allows you to define outgoing [ports](http://elm-lang.org/blog/announce/0.11.elm) like `gpio22` or `pwm18` to control the Pi's GPIO pins, and the one PWM pin. At this moment, only _output_ is supported. The GPIO pins must have type `Signal Bool` and the PWM must have type `Signal Int`. This is currently not enforced at compile time. Only one file is supported. To get a better feel for what's going on, just read the code; there's not much of it!
 
-Elmberry has only been tested on Raspian (Jan 2014 release), and I actually haven't had a chance to take a multimeter to the pins yet. But this testing checks out: `watch -d -n 0.1 gpio readall`. I'm hoping to expand it in the next few months.
+Elmberry has only been tested on Raspian (Jan 2014 release).  
+Useful for debugging: `watch -d -n 0.1 gpio readall` and an oscilliscope.
